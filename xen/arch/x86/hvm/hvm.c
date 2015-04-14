@@ -715,7 +715,7 @@ static int hvm_ioreq_server_map_pages(struct hvm_ioreq_server *s,
                                       bool_t is_default, bool_t handle_bufioreq)
 {
     struct domain *d = s->domain;
-    unsigned long ioreq_pfn, bufioreq_pfn;
+    unsigned long ioreq_pfn, bufioreq_pfn = 0;
     int rc;
 
     if ( is_default )
